@@ -13,7 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: xcodebuild clean -workspace GitActionProject.xcworkspace -configuration Release -scheme GitActionProject
+    - name: Run Clean
+      run: xcodebuild clean -project GitActionProject.xcodeproj -scheme GitActionProject
     - name: Run tests
       run: swift test -v
+    
