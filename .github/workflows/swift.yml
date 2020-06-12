@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Clean
       run: xcodebuild clean -project GitActionProject.xcodeproj -scheme GitActionProject
-    - name: Run tests
-      run: swift test -v
+    - name: Run Build
+      run: xcodebuild build -project GitActionProject.xcodeproj -scheme GitActionProject
     
